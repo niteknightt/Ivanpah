@@ -13,8 +13,8 @@ repositories {
     maven {
         url = uri("https://maven.pkg.github.com/niteknightt/coalinga")
         credentials {
-            username = "niteknightt@gmail.com"
-            password = "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"
+            username = System.getenv("NN_GITHUB_USER")
+            password = System.getenv("NN_GITHUB_ACCESS_TOKEN")
         }
     }
 }
