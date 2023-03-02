@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+repositories {
+    maven {
+        url = uri("https://maven.pkg.github.com/niteknightt/coalinga")
+        credentials {
+            username = "niteknightt@gmail.com"
+            password = "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"
+        }
+    }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'niteknightt_coalingagroupid:coalingaartifactid:0.4'
+}
+
+test {
+    useJUnitPlatform()
+}
