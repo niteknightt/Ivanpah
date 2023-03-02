@@ -17,12 +17,20 @@ repositories {
             password = System.getenv("NN_GITHUB_ACCESS_TOKEN")
         }
     }
+    maven {
+        url = uri("https://maven.pkg.github.com/niteknightt/fresno")
+        credentials {
+            username = System.getenv("NN_GITHUB_USER")
+            password = System.getenv("NN_GITHUB_ACCESS_TOKEN")
+        }
+    }
 }
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     implementation 'niteknightt_coalingagroupid:coalingaartifactid:0.5'
+    implementation 'niteknightt_fresno:fresno:0.1'
 }
 
 test {
